@@ -124,10 +124,17 @@ header {
 	position: absolute;
 }
 #banner .arrow_left {
-	left: 10px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 1rem;
+
 }
 #banner .arrow_right {
-	right: 10px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 1rem;
 }
 /* Gestion des points du carrousel */
 .dots {

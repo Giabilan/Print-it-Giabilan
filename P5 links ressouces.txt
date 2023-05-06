@@ -1,0 +1,19 @@
+P5 links ressouces:
+
+https://openclassrooms.com/fr/paths/594/projects/1147/assignment
+
+https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3/8061421-abordez-dautres-techniques-de-mise-en-page
+
+https://openclassrooms.com/fr/courses/7697016-creez-des-pages-web-dynamiques-avec-javascript/7911057-generez-le-contenu-de-votre-page-grace-au-dom
+
+https://openclassrooms.com/fr/courses/7697016-creez-des-pages-web-dynamiques-avec-javascript/7911138-mettez-a-jour-l-affichage-de-la-page-web
+
+https://developer.mozilla.org/fr/docs/Learn/JavaScript/Building_blocks/Events
+
+https://developer.mozilla.org/fr/docs/Learn/JavaScript/First_steps/Arrays
+
+https://openclassrooms.com/fr/courses/7697016-creez-des-pages-web-dynamiques-avec-javascript/7911151-envoyez-une-requete-depuis-le-navigateur
+
+https://developer.mozilla.org/fr/docs/Learn/JavaScript/Building_blocks/Events
+
+https://openclassrooms.com/fr/courses/6175841-apprenez-a-programmer-avec-javascript/6278948-choisissez-la-condition-appropriee-pour-controler-le-deroulement-de-votre-programme-if-else-switch
