@@ -220,6 +220,13 @@ header {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+#banner .arrow_left img:hover,
+#banner .arrow_right img:hover {
+  transform: scale(0.90);
+  transition: all 200ms ease-in-out;
 }
 
 #banner .arrow_left {
