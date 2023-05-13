@@ -1,4 +1,4 @@
-// Déclaration d'un tableau contenant les informations des slides
+// Déclaration d'un tableau "slides" contenant les informations de chaque slide
 const slides = [
   {
     image: "slide1.jpg", // Le nom du fichier image
@@ -19,37 +19,37 @@ const slides = [
   },
 ];
 
-// Sélectionne la class "arrow" de la page HTML
+// Sélection de tous les éléments avec la classe "arrow"
 const arrows = document.querySelectorAll(".arrow");
 
-// Déclaration d'une variable pour stocker l'index du slide courant
+// Déclaration d'une variable "cursor" pour suivre la position actuelle du slide
 let cursor = 1;
 
-// Parcours du tableau des flèches avec une boucle forEach
+// Boucle sur *chaque* élément "arrow"
 arrows.forEach((arrow) => {
-  // Ajout d'un addEventListener, click sur chaque flèche
+  // Ajout d'un event "click" à chaque flèche "arrow"
   arrow.addEventListener("click", () => {
-    // Modification de la classe du point correspondant au slide courant pour le désélectionner
+    // Réinitialisation de la classe de l'élément dot actuel
     document.getElementById("dot" + cursor).className = "dot";
 
-    // Condition pour déterminer le sens de la flèche et incrémenter(+) ou décrémenter(-) l'index du slide courant
+    // Si arrow à la classe "arrow_right"
     if (arrow.classList.contains("arrow_right")) {
-      // Si la flèche est à droite, on augmente l'index de 1 ou on le remet à 1 si on dépasse la longueur du tableau
-      cursor = cursor + 1 == 5 ? 1 : cursor + 1;
-    } else {
-      // Si la flèche est à gauche, on diminue l'index de 1 ou on le met à la longueur du tableau si on passe en dessous de 1
-      cursor = cursor - 1 == 0 ? 4 : cursor - 1;
-    }
+      // Si oui, incrémenter le curseur ou le réinitialiser à 1 s'il atteint la fin
+      cursor = cursor + 1 === 5 ? 1 : cursor + 1;
+    } else {  // Sinon, décrémenter le curseur ou le réinitialiser à 4 s'il atteint le début
+      // Note: 4 est le nombre de slides dans le tableau "slides"
+      cursor = cursor - 1 === 0 ? 4 : cursor - 1;
+    } // Fin de la condition
 
-    // Modification de la classe du point correspondant au nouveau slide courant pour le sélectionner
+    // Mise à jour de la classe de l'élément dot actuel
     document.getElementById("dot" + cursor).className = "dot dot_selected";
 
-    // Modification de l'attribut src de l'image du banner avec le nom du fichier image du nouveau slide courant
+    // Mise à jour de l'image du slide en utilisant la propriété "image" de l'objet slide correspondant
     document.querySelector(".banner-img").src = `./assets/images/slideshow/${
       slides[cursor - 1].image
     }`;
 
-    // Modification du contenu HTML de l'élément avec l'id tagline avec le texte du nouveau slide courant
+    // Mise à jour du texte du slide en utilisant la propriété "tagLine" de l'objet slide correspondant
     document.getElementById("tagline").innerHTML = slides[cursor - 1].tagLine;
   });
 });
