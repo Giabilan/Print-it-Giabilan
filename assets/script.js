@@ -11,7 +11,7 @@ const slides = [
   },
   {
     image: "slide3.jpg",
-    tagLine: "Grand choix de couleurs <span>de CMJN aux pantones</span>",
+    tagLine: "Grand choix de coulesurs <span>de CMJN aux pantones</span>",
   },
   {
     image: "slide4.png",
@@ -34,22 +34,22 @@ arrows.forEach((arrow) => {
 
     // Si arrow à la classe "arrow_right"
     if (arrow.classList.contains("arrow_right")) {
-      // Si oui, incrémenter le curseur ou le réinitialiser à 1 s'il atteint la fin
+      // Ce code incrémente cursor de 1, mais si cursor atteint 5, il est réinitialisé à 1 || "? donc" ": sinon"
       cursor = cursor + 1 === 5 ? 1 : cursor + 1;
-    } else {  // Sinon, décrémenter le curseur ou le réinitialiser à 4 s'il atteint le début
-      // Note: 4 est le nombre de slides dans le tableau "slides"
+    } else {
+      // Ce code décrémente cursor de 1, mais si cursor atteint 0, il est réinitialisé à 4 || "? donc" ": sinon"
       cursor = cursor - 1 === 0 ? 4 : cursor - 1;
     } // Fin de la condition
 
-    // Mise à jour de la classe de l'élément dot actuel
+    // Ajout de la classe "dot_selected" à l'élément dot correspondant à la position actuelle du slide
     document.getElementById("dot" + cursor).className = "dot dot_selected";
 
-    // Mise à jour de l'image du slide en utilisant la propriété "image" de l'objet slide correspondant
+    // cursor - 1 car le tableau commence à l'index 0 pour les images
     document.querySelector(".banner-img").src = `./assets/images/slideshow/${
       slides[cursor - 1].image
     }`;
 
-    // Mise à jour du texte du slide en utilisant la propriété "tagLine" de l'objet slide correspondant
+    // cursor - 1 car le tableau commence à l'index 0 pour les taglines (textes)
     document.getElementById("tagline").innerHTML = slides[cursor - 1].tagLine;
   });
 });
