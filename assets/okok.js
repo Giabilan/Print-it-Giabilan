@@ -53,9 +53,7 @@ arrows.forEach(function (arrow) {
 
     // cursor - 1 car le tableau commence à l'index 0 pour les images
     let currentImage = slides[cursor - 1].image;
-    document.querySelector(
-      ".banner-img"
-    ).src = `./assets/images/slideshow/${currentImage}`;
+    document.querySelector(".banner-img").src = `./assets/images/slideshow/${currentImage}`;
 
     // cursor - 1 car le tableau commence à l'index 0 pour les taglines (textes)
     let currentTagline = slides[cursor - 1].tagLine;
